@@ -2,20 +2,20 @@
 
 Code study in text highlighting. Inspired by the [Pocket app](https://help.getpocket.com/article/1144-highlighting-in-pocket).
 
-![](./screen-recording.gif)
+**Pocket**
+
+![](./pocket-screen-recording.gif)
+
+**Prototype**
+
+![](./prototype-screen-recording.gif)
 
 ## Roadmap
 
-- [ ] Add ability to clear highlight
+- [x] Add ability to clear highlight
+- [ ] Hide button until text is highlighted
 - [ ] Add ability to select multiple paragraphs
-- [ ] Add [webpack](https://webpack.js.org/) hot reloading—to speed up development
-
-## References
-
-- [Get the Highlighted/Selected text](https://stackoverflow.com/a/5379408/11809808) - Stack Overflow
-- [Element: mouseup event](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event) - MDN web docs
-- [javascript user selection highlighting](https://stackoverflow.com/a/317399/11809808) - Stack Overflow
 
 ---
 
-GIF created using QuickTime and [Online Converter](https://www.onlineconverter.com/mov-to-gif).
+GIFs created using QuickTime and [Online Converter](https://www.onlineconverter.com/mov-to-gif).

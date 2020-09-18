@@ -40,11 +40,12 @@
 
   <div class="boundary">
     <h1>On Cats, Dogs, and Ice Cream</h1>
-    <p class="prompt">👇 Highlight some text below 👇</p>
+    <p class="prompt">👇 Select some text below 👇</p>
     <div id="textarea" class="textarea">
       <p>I don't like cats. But dogs are ok. I'll probably never own one. But I do pet them sometimes if I'm in the mood.</p>
       <p>You should never feed your dog ice cream. He will probably die. And if he survives, he'll probably be addicted to sugar and ice cream.</p>
       <p>So don't buy a cat. And don't feed your dog ice cream.</p>
+      <button id="highlightToggle" data-text-is-highlighted="false">Highlight text</button>
     </div>
     <footer class="footer">
       <hr>
@@ -53,22 +54,29 @@
   </div>
 
   <script>
-    const textarea = document.getElementById('textarea');
-    textarea.addEventListener('mouseup', (e) => {
-      // var selection = window.getSelection();
-      // var range = selection.getRangeAt(0);
-      // var newNode = document.createElement("span");
-      // newNode.setAttribute("style", "background-color: pink;");
-      // range.surroundContents(newNode);
+    const highlightToggle = document.getElementById('highlightToggle');
+    highlightToggle.addEventListener('click', () => {
+      if (highlightToggle.dataset.textIsHighlighted === 'false') {
+        const selection = window.getSelection().getRangeAt(0);
+        const wrapper = document.createElement('span');
+        wrapper.setAttribute('class', 'highlighted-text');
+        selection.surroundContents(wrapper);
 
-      const selection = window.getSelection().getRangeAt(0);
-      const wrapper = document.createElement('span');
-      wrapper.setAttribute('class', 'highlighted-text');
-      selection.surroundContents(wrapper);
+        window.getSelection().removeAllRanges();
 
+        highlightToggle.dataset.textIsHighlighted = 'true';
+        highlightToggle.textContent = 'Remove highlights';
+      } else {
+        const highlightedText = document.getElementsByClassName('highlighted-text')[0];
+        const parent = highlightedText.parentNode;
+        while (highlightedText.firstChild) {
+          parent.insertBefore(highlightedText.firstChild, highlightedText)
+        }
+        parent.removeChild(highlightedText);
 
-
-      console.log(window.getSelection().getRangeAt(0));
+        highlightToggle.dataset.textIsHighlighted = 'false';
+        highlightToggle.textContent = 'Highlight text';
+      }
     });
   </script>
 </body>

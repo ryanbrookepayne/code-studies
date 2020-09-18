@@ -15,3 +15,7 @@ Code study in text highlighting. Inspired by the [Pocket app](https://help.getpo
 - [Get the Highlighted/Selected text](https://stackoverflow.com/a/5379408/11809808) - Stack Overflow
 - [Element: mouseup event](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event) - MDN web docs
 - [javascript user selection highlighting](https://stackoverflow.com/a/317399/11809808) - Stack Overflow
+
+---
+
+GIF created using QuickTime and [Online Converter](https://www.onlineconverter.com/mov-to-gif).

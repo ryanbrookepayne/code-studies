@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pocket Text Highlighting</title>
+
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .boundary {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      color: lightslategray;
+    }
+
+    .prompt {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .textarea {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="boundary">
+    <h1>On Cats, Dogs, and Ice Cream</h1>
+    <p class="prompt">👇 Highlight some text below 👇</p>
+    <div id="textarea" class="textarea">
+      <p>I don't like cats. But dogs are ok. I'll probably never own one. But I do pet them sometimes if I'm in the mood.</p>
+      <p>You should never feed your dog ice cream. He will probably die. And if he survives, he'll probably be addicted to sugar and ice cream.</p>
+      <p>So don't buy a cat. And don't feed your dog ice cream.</p>
+    </div>
+    <footer class="footer">
+      <hr>
+      <p>Inspired by the <a href="https://help.getpocket.com/article/1144-highlighting-in-pocket">Pocket app highlighting feature</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const textarea = document.getElementById('textarea');
+    textarea.addEventListener('mouseup', (e) => {
+      console.log(window.getSelection().toString());
+      console.log(textarea);
+    });
+  </script>
+</body>
+
+</html>

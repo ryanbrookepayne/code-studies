@@ -2,7 +2,7 @@
 
 Code study in text highlighting. Inspired by the [Pocket app](https://help.getpocket.com/article/1144-highlighting-in-pocket).
 
-![](./screen-recording.gif)
+![](./screen-recording-v2.gif)
 
 ## Roadmap
 

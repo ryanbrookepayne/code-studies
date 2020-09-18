@@ -19,6 +19,10 @@
       color: lightslategray;
     }
 
+    .highlighted-text {
+      background-color: yellow;
+    }
+
     .prompt {
       text-align: center;
       margin-bottom: 30px;
@@ -51,8 +55,20 @@
   <script>
     const textarea = document.getElementById('textarea');
     textarea.addEventListener('mouseup', (e) => {
-      console.log(window.getSelection().toString());
-      console.log(textarea);
+      // var selection = window.getSelection();
+      // var range = selection.getRangeAt(0);
+      // var newNode = document.createElement("span");
+      // newNode.setAttribute("style", "background-color: pink;");
+      // range.surroundContents(newNode);
+
+      const selection = window.getSelection().getRangeAt(0);
+      const wrapper = document.createElement('span');
+      wrapper.setAttribute('class', 'highlighted-text');
+      selection.surroundContents(wrapper);
+
+
+
+      console.log(window.getSelection().getRangeAt(0));
     });
   </script>
 </body>

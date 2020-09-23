@@ -1,2 +1,2 @@
 # 📚 Code Studies
-Code prototypes for experimentation and learning
+Code prototypes for experimentation and learning.

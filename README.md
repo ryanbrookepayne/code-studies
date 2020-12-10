@@ -1,6 +1,6 @@
 # Pocket Highlighting
 
-Code study in text highlighting. Inspired by the [Pocket app](https://help.getpocket.com/article/1144-highlighting-in-pocket).
+Code study in text highlighting inspired by the [Pocket app](https://help.getpocket.com/article/1144-highlighting-in-pocket).
 
 **Pocket**
 
